@@ -1,13 +1,16 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+import Items.Archive
+import Items.Note
+import Menu.ArchiveMenu
+import Menu.Menu
 
-    var archiveList:MutableList<Archive> = mutableListOf()
-    archiveList.add(Archive("Первый архив","некиеДанные",))
-    archiveList.add(Archive("Второй архив","некиеДанные",))
+fun main() {
 
-    var archiveMenu:Menu = Menu("Меню Архива","Архив",archiveList)
+    var archiveList: MutableList<Archive> = mutableListOf()
 
+    var archiveMenu: Menu<MutableList<Note>, Archive> =
+        ArchiveMenu("Управление Архивами", TypeOfInterface.ARCHIVE, archiveList)
 
-    archiveMenu.showMenu()
+    archiveMenu.start()
+    println("Работа программы завершена!")
 
 }

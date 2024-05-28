@@ -1,4 +1,4 @@
-public  enum class typeOfInterface(val nameOfType:String) {
+enum class TypeOfInterface(val nameOfType:String) {
     NOTE("Заметка"),
     ARCHIVE("Архив")
 }
